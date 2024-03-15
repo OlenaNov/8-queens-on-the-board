@@ -71,17 +71,19 @@ button:focus-visible {
   }
 }
 
-#board {
-  display: flex;
-  flex-direction: column-reverse;
-  flex-wrap: wrap;
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+screen and (min-resolution: 192dpi) and (max-width: 767px),
+screen and (min-resolution: 2dppx) and (max-width: 767px) {
+    
+  #board {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
 
-  width: 480px;
-  height: 480px;
-  border: 6px solid #888;
-  border-radius: 4px;
-
-  /* background-color: moccasin; */
+    width: 320px;
+    height: 320px;
+    border: 6px solid #888;
+    border-radius: 4px;
 }
 
 .square {
@@ -89,6 +91,17 @@ button:focus-visible {
   justify-content: center;
   align-items: center;
 
+  width: 40px;
+  height: 40px;
+}
+}
+
+#board {
+  width: 480px;
+  height: 480px;
+}
+
+.square {
   width: 60px;
   height: 60px;
 }
@@ -104,3 +117,4 @@ button:focus-visible {
   width: 30px;
   height: 30px;
 }
+
